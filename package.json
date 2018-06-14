@@ -1,0 +1,27 @@
+{
+  "name": "next-yarn-workspaces",
+  "version": "1.0.0",
+  "description": "The Workspace",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"lerna run dev --scope web --scope api\" \"micro-proxy -r rules-dev.json\"",
+    "dev:web": "lerna run dev --scope web",
+    "dev:api": "lerna run dev --scope api",
+    "start": "concurrently \"lerna run start --scope web --scope api\" \"micro-proxy -r rules-dev.json\"",
+    "start:web": "lerna run start --scope web",
+    "start:api": "lerna run start --scope api"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lerna": "^2.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "micro-proxy": "^1.1.0"
+  },
+  "engines": {
+    "yarn": "^1.7.0"
+  }
+}

@@ -1,0 +1,27 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# we use yarn
+package-lock.json
+
+/integration-tests/**/__diff_output__
+
+# testing
+coverage
+
+# production
+.env
+.env.production
+.next
+
+# misc
+.DS_Store
+npm-debug.log
+yarn-error.log
+.vscode
+.idea
+jest
+
+lerna-debug.log
